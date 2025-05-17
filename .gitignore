@@ -4,7 +4,10 @@ figures/
 experiments/
 checkpoints
 visualizations/
-results/
+*results/
+*trained_models/
+data/
+.vscode/
 ## config files
 #*.yaml
 # Byte-compiled / optimized / DLL files

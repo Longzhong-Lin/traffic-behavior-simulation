@@ -105,7 +105,7 @@ def get_nusc_renderer(dataset_path):
 
     dataset = UnifiedDataset(**kwargs)
 
-    renderer = NuscRenderer(dataset, raster_size=200, resolution=2)
+    renderer = NuscRenderer(dataset, raster_size=500, resolution=2)
 
     return renderer
 
@@ -352,7 +352,7 @@ def scene_to_video(rasterizer, h5f, scene_index, output_dir):
                 draw_action_sample=True,
                 focus_agent_id=[0],
                 traj_len=20,
-                linewidth=2.0,
+                linewidth=1.0,
                 # ras_pos=scene_data["centroid"][0, 0]
             )
 

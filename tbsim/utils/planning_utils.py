@@ -162,7 +162,8 @@ def ego_sample_planning(
 
     progress = get_total_distance(ego_trajectories)
 
-    log_likelihood = 0 if log_likelihood is None else log_likelihood
+    log_likelihood = torch.tensor([0], device=ego_trajectories.device) \
+        if log_likelihood is None else log_likelihood
     if log_likelihood.ndim==3:
         log_likelihood = get_terminal_likelihood_reward(ego_trajectories, raster_from_agent, log_likelihood)
     total_score = (

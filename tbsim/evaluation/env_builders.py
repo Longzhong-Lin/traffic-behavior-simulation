@@ -169,7 +169,7 @@ class EnvNuscBuilder(EnvironmentBuilder):
                 "incl_ped_walkways": False,
                 # Collation can be quite slow if vector maps are included,
                 # so we do not unless the user requests it.
-                "no_collate": True,
+                "collate": False,
             },
             num_workers=os.cpu_count(),
             desired_dt=data_cfg.step_time,
